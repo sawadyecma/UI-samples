@@ -1,12 +1,18 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Accordion1 } from "./pages/accordion/Accordion1";
+import {
+  createBrowserRouter,
+  RouteObject,
+  RouterProvider,
+} from "react-router-dom";
+import { ROUTE_PATHS } from "./pages/route-path";
+import { Layout } from "./shared/Layout";
+
+const router = createBrowserRouter(
+  ROUTE_PATHS.map(({ element, ...item }) => ({
+    ...item,
+    element: <Layout>{element}</Layout>,
+  })) satisfies RouteObject[]
+);
 
 export const App = () => {
-  return (
-    <RouterProvider
-      router={createBrowserRouter([
-        { path: "/accordion/1", element: <Accordion1 /> },
-      ])}
-    />
-  );
+  return <RouterProvider router={router} />;
 };

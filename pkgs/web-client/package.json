@@ -12,7 +12,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "accordion": "file:../ui/accordion"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

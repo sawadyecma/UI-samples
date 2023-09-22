@@ -17,7 +17,8 @@
     "url": "https://github.com/sawadyecma/UI-samples/issues"
   },
   "homepage": "https://github.com/sawadyecma/UI-samples#readme",
-  "workspaces":[
-    "./pkgs/*"
+  "workspaces": [
+    "./pkgs/*",
+    "./pkgs/ui/*"
   ]
 }
